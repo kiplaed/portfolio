@@ -151,30 +151,11 @@ header .navbar .navbar-collapse a:hover {
     align-items: center;
 }
 
-.social-icons {
-    display: flex;
-    margin-left: 1rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-}
-
-.social-icons a {
-    display: flex;
-    font-size: 1.7em;
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: .7s ease;
-}
-
-.social-icons a ion-icon {
-    margin: 1rem;
-}
-.grid{
+.grid {
     font-size: 1.4em;
     display: grid;
     gap: 2rem;
-    grid-template-columns:repeat(3 ,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .social-icons a:hover {
@@ -186,6 +167,7 @@ header .navbar .navbar-collapse a:hover {
     width: 100%;
     align-items: center;
     padding: 2em;
+    height: 100vh;
 
 }
 
@@ -244,76 +226,107 @@ header .navbar .navbar-collapse a:hover {
     transition: .5s ease;
 }
 
-.social-icons a ion-icon {
-    z-index: -1;
+.blog {
+    height: 100vh;
+}
+
+.blog-update {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.about {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.about-image{
+    padding: 1px;
+}
+.about-image img{
+    width: 100%;
+    border-radius: 5px;
 }
 
 
-
-footer{
+footer {
     padding: 10px;
     background: none;
-    color: var(--secondary-color);
-}
-.dark footer{
-    font-weight: 400;
-    padding: 10px;
-    background: none;
-    color: var(--text-color);
+    color: var(--primary-color);
+    width: 100%;
+    height: 100vh;
 }
 
-footer .content{
-    margin: .5em;
+footer .fcontent {
+    margin: 2em;
 }
-footer .icon i{
+
+footer .icon i {
     font-size: 1.5em;
     margin-right: 20px;
 }
-footer .facebook ,.twitter ,.instagram ,.location ,.school{
+
+footer .facebook,
+.twitter,
+.instagram,
+.location,
+.school {
     display: flex;
     padding: 5px;
     align-items: center;
 }
-.f-logo h4{
+
+.f-logo h4 {
     font-size: 1.6em;
     font-weight: 700;
 }
-footer a{
-    font-size: 13px;
+
+footer a {
+    font-size: 10px;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
     transition: .3s ease-in-out;
 }
-footer a:hover{
+
+footer a:hover {
     transition: .3s ease-in-out;
 }
 
-footer .content .f-ooter{
-    justify-content: space-evenly;
+footer .fcontent .f-ooter {
+    justify-content: center;
 }
-.grid{
+
+.grid {
     font-size: 1.4em;
     display: grid;
     gap: 2rem;
-    grid-template-columns:repeat(4 ,3fr);
+    grid-template-columns: repeat(2, 1fr);
 }
-footer h5{
+
+footer h5 {
     font-weight: 700;
     text-decoration: underline;
 }
-footer h6{
+
+footer h6 {
     font-weight: 600;
 }
-footer .about p{
-    justify-content: space-evenly;
-    font-size: .6em;
-    font-weight:500 ;
-}
-footer span{
+
+footer span {
     transition: .4s ease-in-out;
 }
-footer span:hover{
+
+footer span:hover {
     padding-right: 5px;
     transition: .4s ease-in-out;
 }
@@ -345,7 +358,7 @@ footer span:hover{
     }
 
     header {
-        padding: 12px 35px;
+        padding: 12px 50px;
     }
 
     .text {
@@ -363,6 +376,17 @@ footer span:hover{
 
     .text p {
         font-size: .8em;
+    }
+    .about-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-image{
+        padding: 5px;
+    }
+    .about-image img{
+        width: 100%;
+        border-radius: 5px;
     }
 }
 
@@ -397,9 +421,10 @@ footer span:hover{
         margin: 20px;
 
     }
-    .grid{
+
+    .grid {
         display: grid;
-        grid-template-columns: repeat(2 , 170px);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.4rem;
         font-size: 1em;
     }
@@ -467,6 +492,7 @@ footer span:hover{
     .image img {
         width: 100%;
     }
+
     .projects {
         width: 100%;
         align-items: center;
@@ -521,17 +547,25 @@ footer span:hover{
         transition: .5s ease;
     }
 
-    footer .content{
-        margin: .5em;
+    footer .fcontent {
+        margin: 2em;
     }
-    footer a{
-        font-size:12px;
-        word-spacing: -.16em;
-    }
-}
 
-@media only  screen  and (max-width:420px){
-    footer,.contact{
-        margin-top: -2em;
+    footer a {
+        font-size: 10px;
+        word-spacing: .16em;
     }
 }
+@media (max-width:450px){
+    .about-content{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+    .about-image{
+        padding: 5px;
+    }
+    .about-image img{
+        width: 100%;
+        border-radius: 5px;
+    }
+} 
