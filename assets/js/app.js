@@ -25,27 +25,6 @@ darkMode.addEventListener('click', () => {
      body.classList.remove('dark');
 });
 
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-     const currentScroll = window.pageYOffset
-
-     if (currentScroll <= 0) {
-          body.classList.remove("scroll_up");
-     }
-
-     if (currentScroll > lastScroll && !body.classList.contains("scroll_down")) {
-          body.classList.remove("scroll_up");
-          body.classList.add("scroll_down");
-
-          if (currentScroll < lastScroll && body.classList.contains("scroll_down")) {
-               body.classList.remove("scroll_down");
-               body.classList.add("scroll_up");
-          }
-          lastScroll = currentScroll;
-     }
-
-});
 
 
 
