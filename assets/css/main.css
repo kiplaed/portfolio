@@ -39,7 +39,7 @@
 
 body {
     background-color: var(--background);
-    font-family: "berlin sans fb", sans-serif;
+    font-family: 'Kanit', sans-serif;
     color: var(--primary-color);
 }
 
@@ -71,6 +71,7 @@ body {
 header {
     position: -webkit-sticky;
     position: sticky;
+    font-family: 'Racing Sans One', cursive;
     top: 0;
     left: 0;
     width: 100%;
@@ -88,7 +89,6 @@ header {
 header .logo {
     text-decoration: none;
     font-size: var(--logo);
-    font-family: "arciform sans",sans-serif;
     font-weight: 500;
     color: var(--primary-color);
 }
@@ -233,6 +233,11 @@ header .navbar .navbar-collapse a:hover {
 .project-link i,.project-link ion-icon{
     font-size: 1.4em;
     margin-left: .5em;
+}
+
+.project-link:hover i,.project-link:hover ion-icon{
+    margin-left: .9em;
+    transition:.5s ease-in-out;
 }
 
 .project-link:hover {
