@@ -86,9 +86,10 @@ header {
     z-index: 99;
 }
 
-header .logo {
+.logo {
     text-decoration: none;
     font-size: var(--logo);
+    font-family: 'Racing Sans One', cursive;
     font-weight: 500;
     color: var(--primary-color);
 }
@@ -228,7 +229,7 @@ header .navbar .navbar-collapse a:hover {
     text-transform: uppercase;
     color: var(--background);
     font-weight: var(--weight-4);
-    transition: .5s ease;
+    transition: .5s ease-in-out;
 }
 .project-link i,.project-link ion-icon{
     font-size: 1.4em;
@@ -236,14 +237,14 @@ header .navbar .navbar-collapse a:hover {
 }
 
 .project-link:hover i,.project-link:hover ion-icon{
-    margin-left: .9em;
+    margin-left: .7em;
     transition:.5s ease-in-out;
 }
 
 .project-link:hover {
-    background: #d0eaf1;
-    color: var(--primary-hover);
-    transition: .5s ease;
+    background: #5e9aa9;
+    color: var(--background);
+    transition: .5s ease-in-out;
 }
 
 .blog {
@@ -560,14 +561,13 @@ footer span:hover {
     }
 
     .project-link {
-        width: 140px;
+        width: 125px;
         position: relative;
         background-color: var(--primary-color);
         border-radius: 3px;
         margin-top: 1em;
         display: flex;
         font-size: 1em;
-        justify-content:center;
         align-items:center;
         padding: 5px;
         text-decoration: none;
