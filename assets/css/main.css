@@ -39,7 +39,7 @@
 
 body {
     background-color: var(--background);
-    font-family: "Inter", sans-serif;
+    font-family: "berlin sans fb", sans-serif;
     color: var(--primary-color);
 }
 
@@ -131,6 +131,7 @@ header .navbar .navbar-collapse a:hover {
     width: 100%;
     padding: 10px 30px;
     display: flex;
+    gap:30px;
     justify-content: space-between;
 }
 
@@ -141,6 +142,9 @@ header .navbar .navbar-collapse a:hover {
     justify-content: center;
     margin: auto;
     font-size: 1.2em;
+}
+.text h1{
+    font-weight: bold;
 }
 
 .image {
