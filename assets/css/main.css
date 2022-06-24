@@ -6,6 +6,10 @@
     scroll-padding: 60px;
 
 }
+::selection{
+    color:var(--background);
+    background:var(--primary-color)
+}
 
 :root {
     --primary-color: #000000;
@@ -39,7 +43,7 @@
 
 body {
     background-color: var(--background);
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--primary-color);
 }
 
@@ -48,20 +52,21 @@ body {
     width: 25px;
     height: 25px;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     right: 1rem;
 }
 
-.switchmodes img {
+.switchmodes ion-icon {
     display: none;
-    transition: .6s ease-in-out;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.switchmodes img.active {
+.switchmodes ion-icon.active {
     display: block;
     cursor: pointer;
-    transition: .6s ease-in-out;
 }
-
 
 .dark header img,
 .dark header .menu {
@@ -71,7 +76,6 @@ body {
 header {
     position: -webkit-sticky;
     position: sticky;
-    font-family: 'Racing Sans One', cursive;
     top: 0;
     left: 0;
     width: 100%;
@@ -120,8 +124,9 @@ header .navbar .navbar-collapse a::before {
     position: absolute;
     background: rgb(26, 72, 165);
     width: 0;
-    height: 2px;
-    bottom: -2px;
+    height: 3px;
+    bottom: -4px;
+    border-radius: 5px;
     left: 0;
     transition: 0.8s ease;
 }
@@ -148,7 +153,7 @@ header .navbar .navbar-collapse a:hover {
     width: 50%;
     justify-content: center;
     margin: auto;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .text h1{
     font-weight: bold;
@@ -168,7 +173,7 @@ header .navbar .navbar-collapse a:hover {
 
 .grid {
     margin: 0.4em;
-    font-size: 1.4em;
+    font-size: 1.2em;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
@@ -240,6 +245,7 @@ header .navbar .navbar-collapse a:hover {
 .project-link i,.project-link ion-icon{
     font-size: 1.4em;
     margin-left: .5em;
+    transition:.5s ease-in-out;
 }
 
 .project-link:hover i,.project-link:hover ion-icon{
@@ -286,7 +292,7 @@ header .navbar .navbar-collapse a:hover {
 
 
 footer {
-    padding: 10px;
+    padding: 15px;
     background: none;
     color: var(--primary-color);
     width: 100%;
@@ -294,10 +300,10 @@ footer {
 }
 
 footer .fcontent {
-    margin: 1em;
+    margin: 1.2em;
 }
 
-footer .icon i {
+footer .icon ion-icon {
     font-size: 1.5em;
     margin-right: 15px;
 }
@@ -308,7 +314,7 @@ footer .facebook,
 .location,
 .school {
     display: flex;
-    padding: 5px;
+    padding: 3px;
     align-items: center;
 }
 
@@ -318,7 +324,7 @@ footer .facebook,
 }
 
 footer a {
-    font-size: 10px;
+    font-size:normal;
     font-weight: normal;
     text-decoration: none;
     text-transform: uppercase;
@@ -342,10 +348,10 @@ footer .fcontent .f-ooter {
 }
 
 .grid {
-    font-size: 1.2em;
+    font-size: 1em;
     display: grid;
     gap:2rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 footer h5 {
@@ -402,7 +408,7 @@ footer span:hover {
         width: 50%;
         margin: auto;
         color: var(--primary-color);
-        font-size: 1.2em;
+        font-size: 1em;
         transform: scale(.8);
     }
 
@@ -411,7 +417,7 @@ footer span:hover {
     }
 
     .text p {
-        font-size: .8em;
+        font-size:normal;
     }
     .about-content{
         display: grid;
@@ -438,15 +444,15 @@ footer span:hover {
     }
 
     header .navbar.active {
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100vh;
         top: 0;
         left: 0;
+        bottom: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgba(5, 5, 10, .7);
         transition: 1s ease;
         z-index: 99;
     }
@@ -456,7 +462,7 @@ footer span:hover {
 
     header .navbar .navbar-collapse a {
         color: var(--primary-color);
-        font-size: 1em;
+        font-size:normal;
         margin: 20px;
 
     }
@@ -465,7 +471,7 @@ footer span:hover {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
-        font-size: 1em;
+        font-size: normal;
     }
 
     header .navbar .navbar-collapse a:hover {
@@ -475,7 +481,7 @@ footer span:hover {
     header .navbar .navbar-collapse a::before {
         background: var(--hover2);
         height: 2px;
-        bottom: -2px;
+        bottom: -5px;
     }
 
     header .navbar.active .navbar-collapse {
@@ -484,20 +490,18 @@ footer span:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        ;
         justify-content: space-around;
-        box-shadow: 0 5px 25px rgb(1 1 1/20%);
         height: 100%;
         transition: 1s ease;
         z-index: 99;
     }
 
     .menu {
-        width: 30px;
+        width: 25px;
         cursor: pointer;
         background: url(../images/Menu.svg)no-repeat;
-        height: 30px;
-        background-size: 30px;
+        height: 25px;
+        background-size: 25px;
         background-position: center;
         transition: .8s ease;
     }
@@ -518,7 +522,6 @@ footer span:hover {
 
     .text {
         width: 100%;
-        margin-bottom: 1em;
         display: block;
         transform: scale(1);
     }
@@ -535,7 +538,7 @@ footer span:hover {
     .projects {
         width: 100%;
         align-items: center;
-        padding: 1.3em;
+        padding: 1em;
 
     }
 
@@ -544,7 +547,7 @@ footer span:hover {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
     }
 
     .section-title h1 {
@@ -573,7 +576,7 @@ footer span:hover {
         border-radius: 3px;
         margin-top: 1em;
         display: flex;
-        font-size: 1em;
+        font-size: .7em;
         align-items:center;
         padding: 5px;
         text-decoration: none;
@@ -594,7 +597,7 @@ footer span:hover {
     }
 
     footer a {
-        font-size: 8px;
+        font-size: 6px;
     }
 }
 @media (max-width:450px){
