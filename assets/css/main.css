@@ -45,6 +45,7 @@ body {
     background-color: var(--background);
     font-family: 'Poppins', sans-serif;
     color: var(--primary-color);
+    margin-bottom: 3em;
 }
 
 .switchmodes {
