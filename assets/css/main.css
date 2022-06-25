@@ -313,7 +313,8 @@ footer .facebook,
 .twitter,
 .instagram,
 .location,
-.school {
+.school,
+.whatsapp {
     display: flex;
     padding: 3px;
     align-items: center;
@@ -325,7 +326,7 @@ footer .facebook,
 }
 
 footer a {
-    font-size:normal;
+    font-size:13px;
     font-weight: normal;
     text-decoration: none;
     text-transform: uppercase;
@@ -470,7 +471,7 @@ footer span:hover {
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,50%);
         gap: 1.5rem;
         font-size: normal;
     }
@@ -586,6 +587,9 @@ footer span:hover {
         font-weight: var(--weight-4);
         transition: .5s ease;
     }
+    .hire-icons{
+        display: flex;
+    }
 
     .project-link:hover {
         background: #5e9aa9;
@@ -598,7 +602,7 @@ footer span:hover {
     }
 
     footer a {
-        font-size: 6px;
+        font-size: 10px;
     }
 }
 @media (max-width:450px){
