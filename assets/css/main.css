@@ -17,9 +17,7 @@
     rgb(0, 34, 255);
     --background:
     rgb(194 202 246);
-    --font-medium: 1.2em;
     --logo: 2.3em;
-    --weight-4: 500;
     --hover2:
     rgb(55, 112, 226);
 } 
@@ -30,9 +28,6 @@
     rgb(0, 34, 255);
     --background:
     rgb(21, 21, 21);
-    --font-medium: 1.2em;
-    --logo: 2.3em;
-    --weight-4: 500;
     --hover2:
     rgb(63, 120, 177);
 }
@@ -70,7 +65,7 @@ body {
 }
 
 .dark header img,
-.dark header .menu {
+.dark header .menu{
     filter: invert(1);
 }
 
