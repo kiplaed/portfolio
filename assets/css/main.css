@@ -273,19 +273,44 @@ header .navbar .navbar-collapse a:hover {
     padding: 1.3rem;
 }
 
-.about-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-.about-image{
-    padding: 1px;
-}
-.about-image img{
-    width: 100%;
-    border-radius: 5px;
+.about .grid{
+    grid-template-columns: 1fr;
+    grid-auto-rows:125px;
+    gap: 16px;
 }
 
+.col{
+    position: relative;
+}
+.photo-1{
+    grid-row: span 4;
+}
+.photo-2,.photo-6,.photo-7{
+    grid-row: span 3;
+}
+
+.photo-3,.photo-4,.photo-5{
+    grid-row: span 2;
+}
+.photo-8{
+    grid-row: span 2;
+}
+.col img{
+    position: relative;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.col video{
+    position: relative;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
 
 footer {
     padding: 15px;
@@ -416,17 +441,6 @@ footer span:hover {
     .text p {
         font-size:normal;
     }
-    .about-content{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .about-image{
-        padding: 5px;
-    }
-    .about-image img{
-        width: 100%;
-        border-radius: 5px;
-    }
 }
 
 @media (max-width:600px) {
@@ -463,10 +477,20 @@ footer span:hover {
         margin: 20px;
 
     }
+    .photo-1,
+    .photo-2,
+    .photo-3,
+    .photo-4,
+    .photo-5,
+    .photo-6,
+    .photo-7,
+    .photo-8{
+        grid-row: span 4;
+    }
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(2,50%);
+        grid-template-columns: repeat(2,1fr);
         gap: 1.5rem;
         font-size: normal;
     }
@@ -600,16 +624,14 @@ footer span:hover {
         font-size: 10px;
     }
 }
-@media (max-width:450px){
-    .about-content{
-        display: grid;
-        grid-template-columns: repeat(1, 100%);
+
+@media (min-width:600px){
+    .about .grid{
+        grid-template-columns:repeat(2,1fr);
     }
-    .about-image{
-        padding: 5px;
+}
+@media (min-width:900px){
+    .about .grid{
+        grid-template-columns:repeat(3,1fr);
     }
-    .about-image img{
-        width: 100%;
-        border-radius: 5px;
-    }
-} 
+}
