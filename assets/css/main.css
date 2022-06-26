@@ -16,7 +16,7 @@
     --primary-hover:
     rgb(0, 34, 255);
     --background:
-    rgb(194 202 246);
+    rgb(194, 202, 246);
     --logo: 2.3em;
     --hover2:
     rgb(55, 112, 226);
@@ -346,7 +346,7 @@ footer .facebook,
 }
 
 footer a {
-    font-size:13px;
+    font-size:11px;
     font-weight: normal;
     text-decoration: none;
     text-transform: uppercase;
@@ -606,8 +606,16 @@ footer span:hover {
         font-weight: var(--weight-4);
         transition: .5s ease;
     }
+    .hire{
+        grid-column:span 2;
+    }
     .hire-icons{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:10px;
+    }
+    .whatsapp h6{
+        font-size: 10px;
     }
 
     .project-link:hover {
@@ -622,6 +630,13 @@ footer span:hover {
 
     footer a {
         font-size: 10px;
+    }
+    footer .whatsapp .icon ion-icon {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+    footer .whatsapp .info span{
+        font-size:normal;
     }
 }
 
