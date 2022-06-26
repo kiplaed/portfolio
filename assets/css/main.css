@@ -11,6 +11,10 @@
     background:var(--primary-color)
 }
 
+urlbar>#url-background{
+    background-color: var(--background)!important;
+}
+
 :root {
     --primary-color: #000000;
     --primary-hover:
@@ -352,6 +356,11 @@ footer a {
     text-transform: uppercase;
     transition: .3s ease-in-out;
     color: rgb(4, 20, 191);
+    display: flex;
+    align-items: center;
+}
+footer a ion-icon {
+    margin-left: 3px;
 }
 .dark footer a{
     color:#9ffff7;
