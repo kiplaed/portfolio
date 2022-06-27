@@ -143,7 +143,7 @@ header .navbar .navbar-collapse a:hover {
     width: 100%;
     padding: 10px 30px;
     display: flex;
-    gap:30px;
+    gap:50px;
     justify-content: space-between;
 }
 
@@ -153,13 +153,14 @@ header .navbar .navbar-collapse a:hover {
     width: 50%;
     justify-content: center;
     margin: auto;
-    font-size: 1.1em;
+    margin-right: 2em;
 }
-.text p{
-    font-size: 16px;
+.textp,.hire p{
+    font-size: 13px;
 }
 .text h1{
     font-weight: bold;
+    margin-bottom: 1em;
 }
 
 .image {
@@ -437,16 +438,14 @@ footer span:hover {
         width: 50%;
         margin: auto;
         color: var(--primary-color);
-        font-size: 1em;
         transform: scale(.8);
     }
 
     .text h1 {
         font-size: 1em;
     }
-
-    .text p {
-        font-size:normal;
+ p {
+        font-size:15px;
     }
 }
 
@@ -551,7 +550,7 @@ footer span:hover {
     .text {
         width: 100%;
         display: block;
-        transform: scale(1);
+        transform: scale(.95);
     }
 
     .image {
