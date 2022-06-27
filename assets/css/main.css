@@ -155,6 +155,9 @@ header .navbar .navbar-collapse a:hover {
     margin: auto;
     font-size: 1.1em;
 }
+.text p{
+    font-size: 16px;
+}
 .text h1{
     font-weight: bold;
 }
@@ -177,11 +180,6 @@ header .navbar .navbar-collapse a:hover {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
-}
-
-.social-icons a:hover {
-    color: var(--hover2);
-    transition: .7s ease;
 }
 
 .projects {
