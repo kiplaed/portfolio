@@ -11,16 +11,13 @@
     background:var(--primary-color)
 }
 
-urlbar>#url-background{
-    background-color: var(--background)!important;
-}
 
 :root {
     --primary-color: #000000;
     --primary-hover:
     rgb(0, 34, 255);
     --background:
-    rgb(194, 202, 246);
+    #c2caf6;
     --logo: 2.3em;
     --hover2:
     rgb(55, 112, 226);
@@ -31,7 +28,7 @@ urlbar>#url-background{
     --primary-hover:
     rgb(0, 34, 255);
     --background:
-    rgb(21, 21, 21);
+    #151515;
     --hover2:
     rgb(63, 120, 177);
 }
