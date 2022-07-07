@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     scroll-padding: 60px;
 
 }
@@ -42,6 +42,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-color);
     margin-bottom: 3em;
+    font-weight:500;
 }
 
 .switchmodes {
@@ -122,13 +123,34 @@ header .navbar .navbar-collapse a::before {
     background: rgb(26, 72, 165);
     width: 0;
     height: 3px;
-    bottom: -4px;
-    border-radius: 5px;
-    left: 0;
+    bottom: -5px;
+    border-radius: 15px;
+    left:0;
+    transition: 0.8s ease;
+}
+header .navbar .navbar-collapse a:nth-child(even):before {
+    content: ' ';
+    position: absolute;
+    background: rgb(26, 72, 165);
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    border-radius: 15px;
+    left:100%;
+    transform: translate(-100%);
     transition: 0.8s ease;
 }
 
-header .navbar .navbar-collapse a:hover:before {
+/* header .navbar .navbar-collapse a:hover:before {
+    width: 100%;
+} */
+header .navbar .navbar-collapse a.active{
+    color:var(--primary-hover);
+    font-style: bold;
+    transition:0.5s ease-in-out;
+}
+header .navbar .navbar-collapse a.active:before{
+    color:var(--primary-hover);
     width: 100%;
 }
 
@@ -239,13 +261,13 @@ header .navbar .navbar-collapse a:hover {
     transition: .5s ease-in-out;
 }
 .project-link i,.project-link ion-icon{
-    font-size: 1.4em;
-    margin-left: .5em;
+    font-size: 1.2em;
+    margin-left: .3em;
     transition:.5s ease-in-out;
 }
 
 .project-link:hover i,.project-link:hover ion-icon{
-    margin-left: .7em;
+    margin-left: .5em;
     transition:.5s ease-in-out;
 }
 
@@ -276,7 +298,7 @@ header .navbar .navbar-collapse a:hover {
 .about .grid{
     grid-template-columns: 1fr;
     grid-auto-rows:125px;
-    gap: 16px;
+    gap: 12px;
 }
 
 .col{
@@ -303,15 +325,6 @@ header .navbar .navbar-collapse a:hover {
     height: 100%;
     border-radius: 5px;
 }
-.col video{
-    position: relative;
-    object-fit: cover;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-}
-
 footer {
     padding: 15px;
     background: none;
@@ -504,7 +517,12 @@ footer span:hover {
 
     header .navbar .navbar-collapse a::before {
         background: var(--hover2);
-        height: 2px;
+        height: 3px;
+        bottom: -5px;
+    }
+    header .navbar .navbar-collapse a:nth-child(even):before {
+        background: var(--hover2);
+        height: 3px;
         bottom: -5px;
     }
 
