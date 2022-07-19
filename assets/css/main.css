@@ -88,17 +88,10 @@ header {
     z-index: 99;
 }
 
-.logo {
-    text-decoration: none;
-    font-size: var(--logo);
-    font-family: 'Racing Sans One', cursive;
-    font-weight: 500;
-    color: var(--primary-color);
-}
 header .logo {
     text-decoration: none;
     font-size: var(--logo);
-    font-family: 'Racing Sans One', cursive;
+    font-family: 'Devonshire', cursive;
     font-weight: 500;
     color: var(--primary-color);
 }
@@ -160,9 +153,9 @@ header .navbar .navbar-collapse a:hover {
 
 .content {
     width: 100%;
-    padding: 10px 30px;
+    padding: 10px 15px;
     display: flex;
-    gap:50px;
+    gap:30px;
     justify-content: space-between;
 }
 
@@ -179,7 +172,45 @@ header .navbar .navbar-collapse a:hover {
 }
 .text h1{
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: .6em;
+}
+
+.get-started{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+    flex-direction: row;
+    gap:2px;
+}
+
+.get-started input,.get-started button{
+    height: 47px;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    padding:4px;
+    font-family: "Poppins",sans-serif;
+}
+.dark .get-started input{
+    background-color:#313235;
+    color: var(--primary-color)
+}
+.get-started input{
+    width: 75%;
+    font-weight: 500;
+    background-color:#e6e9fb;
+    border-top-right-radius:0;
+    border-bottom-right-radius: 0;
+}
+.get-started button{
+    border-top-left-radius:0;
+    border-bottom-left-radius: 0;
+    width: 25%;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: var(--background);
+    font-size: 10px;
 }
 
 .image {
