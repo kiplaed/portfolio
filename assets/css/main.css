@@ -88,6 +88,13 @@ header {
     z-index: 99;
 }
 
+.logo {
+    text-decoration: none;
+    font-size: var(--logo);
+    font-family: 'Devonshire', cursive;
+    font-weight: 500;
+    color: var(--primary-color);
+}
 header .logo {
     text-decoration: none;
     font-size: var(--logo);
@@ -323,7 +330,7 @@ header .navbar .navbar-collapse a:hover {
 .about {
     width: 100%;
     height: auto;
-    padding: 1.3rem;
+    padding: 1rem;
 }
 
 .about .grid{
@@ -334,9 +341,49 @@ header .navbar .navbar-collapse a:hover {
 
 .col{
     position: relative;
+    overflow: hidden;
 }
 .photo-1{
     grid-row: span 4;
+    z-index: 0;
+}
+
+.photo-1:hover .img-info,
+.photo-2:hover .img-info,
+.photo-3:hover .img-info,
+.photo-4:hover .img-info,
+.photo-5:hover .img-info,
+.photo-6:hover .img-info,
+.photo-7:hover .img-info,
+.photo-8:hover .img-info{
+    bottom: 0;
+    transition:.6s ease-in-out;
+}
+.img-info h2,.img-info h4{
+    margin-bottom: 10px;
+}
+.img-info p{
+    border-left: 3px solid var(--background);
+    padding-left: 5px;
+}
+.dark .img-info{
+    background-color:rgba(48, 46, 46, 0.806);
+}
+.img-info{
+    transition:.6s ease-in-out;
+    font-family:"Inter Medium",sans-serif;
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    bottom:-100%;
+    height: auto;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color:rgba(81, 80, 80, 0.632);
+    padding: 10px;
+    z-index: 1;
+    color: var(--primary-color);
+    backdrop-filter: blur(30px);
 }
 .photo-2,.photo-6,.photo-7{
     grid-row: span 3;
