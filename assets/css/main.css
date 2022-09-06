@@ -2,35 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     scroll-padding: 60px;
 
 }
-::selection{
-    color:var(--background);
-    background:var(--primary-color)
+
+::selection {
+    color: var(--background);
+    background: var(--primary-color)
 }
 
 
 :root {
     --primary-color: #000000;
     --primary-hover:
-    rgb(0, 34, 255);
+        rgb(0, 34, 255);
     --background:
-    #c2caf6;
+        #c2caf6;
     --logo: 2.3em;
     --hover2:
-    rgb(55, 112, 226);
-} 
+        rgb(55, 112, 226);
+}
 
 .dark {
     --primary-color: #f0f6fd;
     --primary-hover:
-    rgb(0, 34, 255);
+        rgb(0, 34, 255);
     --background:
-    #151515;
+        #434343;
     --hover2:
-    rgb(63, 120, 177);
+        rgb(63, 120, 177);
 }
 
 ::-webkit-scrollbar {
@@ -38,11 +39,12 @@
 }
 
 body {
-    background-color: var(--background);
-    font-family: 'Poppins', sans-serif;
+    background-color:var(--background);
+    font-family: 'Dm Sans', sans-serif;
     color: var(--primary-color);
     margin-bottom: 3em;
-    font-weight:500;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .switchmodes {
@@ -67,7 +69,7 @@ body {
 }
 
 .dark header img,
-.dark header .menu{
+.dark header .menu {
     filter: invert(1);
 }
 
@@ -77,9 +79,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     margin: 0;
-    background-color: var(--background);
+    background-color:#a2ace6;
     padding: 15px 90px;
     display: flex;
     justify-content: space-between;
@@ -87,21 +89,28 @@ header {
     transition: 0.5s;
     z-index: 99;
 }
+.dark header{
+    background-color:#1d1e28;
+    
+} 
 
 .logo {
     text-decoration: none;
     font-size: var(--logo);
-    font-family: 'Devonshire', cursive;
+    font-family: 'Dm sans medium', cursive;
     font-weight: 500;
     color: var(--primary-color);
 }
+
 header .logo {
     text-decoration: none;
     font-size: var(--logo);
-    font-family: 'Devonshire', cursive;
-    font-weight: 500;
+    font-family: 'Dm sans medium', cursive;
+    font-weight: 600;
     color: var(--primary-color);
+    font-size: 30px;
 }
+
 header .navbar {
     position: relative;
     z-index: 1;
@@ -109,7 +118,7 @@ header .navbar {
 
 header .navbar .navbar-collapse a {
     position: relative;
-    font-size: 1em;
+    font-size: 17px;
     font-weight: 500;
     text-decoration: none;
     margin-right: 15px;
@@ -125,9 +134,10 @@ header .navbar .navbar-collapse a::before {
     height: 3px;
     bottom: -5px;
     border-radius: 15px;
-    left:0;
+    left: 0;
     transition: 0.8s ease;
 }
+
 header .navbar .navbar-collapse a:nth-child(even):before {
     content: ' ';
     position: absolute;
@@ -136,7 +146,7 @@ header .navbar .navbar-collapse a:nth-child(even):before {
     height: 3px;
     bottom: -5px;
     border-radius: 15px;
-    left:100%;
+    left: 100%;
     transform: translate(-100%);
     transition: 0.8s ease;
 }
@@ -144,13 +154,14 @@ header .navbar .navbar-collapse a:nth-child(even):before {
 /* header .navbar .navbar-collapse a:hover:before {
     width: 100%;
 } */
-header .navbar .navbar-collapse a.active{
-    color:var(--primary-hover);
+header .navbar .navbar-collapse a.active {
+    color: var(--primary-hover);
     font-style: bold;
-    transition:0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
-header .navbar .navbar-collapse a.active:before{
-    color:var(--primary-hover);
+
+header .navbar .navbar-collapse a.active:before {
+    color: var(--primary-hover);
     width: 100%;
 }
 
@@ -160,9 +171,9 @@ header .navbar .navbar-collapse a:hover {
 
 .content {
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 20px;
     display: flex;
-    gap:30px;
+    gap: 30px;
     justify-content: space-between;
 }
 
@@ -174,50 +185,61 @@ header .navbar .navbar-collapse a:hover {
     margin: auto;
     margin-right: 2em;
 }
-.textp,.hire p{
-    font-size: 13px;
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-.text h1{
+
+.text p,
+.hire p {
+    font-size: 16px;
+}
+
+.text h1 {
     font-weight: bold;
     margin-bottom: .6em;
 }
 
-.get-started{
+.get-started {
     margin-top: 1em;
     width: 100%;
     display: flex;
     font-weight: 500;
     flex-direction: row;
-    gap:2px;
+    gap: 2px;
 }
 
-.get-started input,.get-started button{
+.get-started input,
+.get-started button {
     height: 47px;
     outline: none;
     border-radius: 3px;
     border: none;
-    padding:4px;
-    font-family: "Poppins",sans-serif;
+    padding: 4px;
+    font-family: "Dm Sans medium",cursive;
 }
-.dark .get-started input{
-    background-color:#313235;
+
+.dark .get-started input {
+    background-color: #313235;
     color: var(--primary-color)
 }
-.get-started input{
+
+.get-started input {
     width: 75%;
     font-weight: 500;
-    background-color:#e6e9fb;
-    border-top-right-radius:0;
+    background-color: #e6e9fb;
+    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-.get-started button{
-    border-top-left-radius:0;
+
+.get-started button {
+    border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     width: 25%;
-    font-weight: 500;
+    font-weight: 400;
     background-color: var(--primary-color);
     color: var(--background);
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .image {
@@ -259,12 +281,12 @@ header .navbar .navbar-collapse a:hover {
 }
 
 .section-title h1 {
-    font-size: 1.3em;
+    font-size: 25px;
     text-transform: uppercase;
 }
 
 .section-title p {
-    font-size: 1em;
+    font-size:18px;
 }
 
 .section-projects {
@@ -281,6 +303,7 @@ header .navbar .navbar-collapse a:hover {
 
 .project-description {
     margin-bottom: 2em;
+    font-size: 16px;
 }
 
 .project-link {
@@ -298,15 +321,18 @@ header .navbar .navbar-collapse a:hover {
     font-weight: var(--weight-4);
     transition: .5s ease-in-out;
 }
-.project-link i,.project-link ion-icon{
+
+.project-link i,
+.project-link ion-icon {
     font-size: 1.2em;
     margin-left: .3em;
-    transition:.5s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
-.project-link:hover i,.project-link:hover ion-icon{
+.project-link:hover i,
+.project-link:hover ion-icon {
     margin-left: .5em;
-    transition:.5s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .project-link:hover {
@@ -330,22 +356,26 @@ header .navbar .navbar-collapse a:hover {
 .about {
     width: 100%;
     height: auto;
-    padding: 1rem;
+    padding: .8rem;
 }
 
-.about .grid{
+.about .grid {
     grid-template-columns: 1fr;
-    grid-auto-rows:125px;
+    grid-auto-rows: 125px;
     gap: 12px;
 }
 
-.col{
+.col {
     position: relative;
     overflow: hidden;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.photo-1{
+
+.photo-1 {
     grid-row: span 4;
     z-index: 0;
 }
@@ -357,47 +387,72 @@ header .navbar .navbar-collapse a:hover {
 .photo-5:hover .img-info,
 .photo-6:hover .img-info,
 .photo-7:hover .img-info,
-.photo-8:hover .img-info{
-    bottom: 0;
-    transition:.6s ease-in-out;
+.photo-8:hover .img-info {
+    bottom: 5px;
+    transition: .6s ease-in-out;
 }
-.img-info h2,.img-info h4{
-    margin-bottom: 10px;
+
+.img-info h2,
+.img-info h4 {
+    margin-bottom:5px;
+    letter-spacing: .9px;
+
 }
-.img-info p{
+
+.img-info h2{
+    font-size: 20px;
+}
+.img-info h4{
+font-size: 18px;
+}
+
+.img-info p {
     border-left: 3px solid var(--background);
     padding-left: 5px;
+    font-size: 16px;
+    letter-spacing: .9px;
 }
-.dark .img-info{
-    background-color:rgba(48, 46, 46, 0.806);
-}
-.img-info{
-    transition:.6s ease-in-out;
-    font-family:"Inter Medium",sans-serif;
+.img-info {
+    transition: .6s ease-in-out;
+    font-family: "Dm Sans Medium", cursive;
     position: absolute;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    bottom:-100%;
+    border-radius:10px;
+    bottom: -100%;
     height: auto;
     padding-bottom: 20px;
-    width: 100%;
-    background-color:rgba(81, 80, 80, 0.632);
+    width: 96%;
+    background-color: rgba(81, 80, 80, 0.694);
     padding: 10px;
     z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
     color: var(--primary-color);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(50px);
+    font-weight: 400;
 }
-.photo-2,.photo-6,.photo-7{
+
+.dark .img-info {
+    background-color: rgba(0, 0, 0, 0.728);
+    font-weight: 300;
+}
+
+.photo-2,
+.photo-6,
+.photo-7 {
     grid-row: span 3;
 }
 
-.photo-3,.photo-4,.photo-5{
+.photo-3,
+.photo-4,
+.photo-5 {
     grid-row: span 2;
 }
-.photo-8{
+
+.photo-8 {
     grid-row: span 2;
 }
-.col img{
+
+.col img {
     position: relative;
     object-fit: cover;
     display: block;
@@ -405,12 +460,14 @@ header .navbar .navbar-collapse a:hover {
     height: 100%;
     border-radius: 5px;
 }
+
 footer {
     padding: 15px;
     background: none;
     color: var(--primary-color);
     width: 100%;
     height: auto;
+    min-height: 85vh;
 }
 
 footer .fcontent {
@@ -434,13 +491,13 @@ footer .facebook,
 }
 
 .f-logo h4 {
-    font-size: 1.5em;
+    font-size: 30px;
     font-weight: 600;
 }
 
 footer a {
-    font-size:11px;
-    font-weight: normal;
+    font-size: 12px;
+    font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
     transition: .3s ease-in-out;
@@ -448,14 +505,17 @@ footer a {
     display: flex;
     align-items: center;
 }
+
 footer a ion-icon {
     margin-left: 3px;
 }
-.dark footer a{
-    color:#9ffff7;
+
+.dark footer a {
+    color: #9ffff7;
 }
-.dark footer a:hover{
-    color:#c3fbff;
+
+.dark footer a:hover {
+    color: #c3fbff;
 }
 
 footer a:hover {
@@ -466,21 +526,25 @@ footer a:hover {
 footer .fcontent .f-ooter {
     justify-content: center;
 }
+.f-ooter{
+    padding: 0 20px;
+}
 
 .grid {
-    font-size: 1em;
     display: grid;
-    gap:2rem;
+    gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
-footer h5 {
-    font-weight: 500;
+footer .hire h4,.me h4{
+    font-weight: bolder;
     text-decoration: underline;
+    font-size: 25px;
 }
 
 footer h6 {
-    font-weight: 500;
+    font-weight:500;
+    font-size: 17px;
 }
 
 footer span {
@@ -528,15 +592,45 @@ footer span:hover {
         width: 50%;
         margin: auto;
         color: var(--primary-color);
-        transform: scale(.8);
+        transform: scale(.9);
     }
+    .image img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
 
     .text h1 {
         font-size: 1em;
     }
- p {
-        font-size:15px;
+
+    p {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
+    .f-ooter{
+        padding: 0 10px;
+    }
+    .photo-1,
+    .photo-2,
+    .photo-3,
+    .photo-4,
+    .photo-5,
+    .photo-6,
+    .photo-7,
+    .photo-8 {
+        grid-row: span 4;
+    }
+
+    .photo-8{
+        grid-row: span 2;
+    }
+    .photo-2,.photo-5,.photo-4{
+        grid-row: span 3;
+    }
+
+    
 }
 
 @media (max-width:600px) {
@@ -563,30 +657,38 @@ footer span:hover {
         transition: 1s ease;
         z-index: 99;
     }
-    header .navbar .navbar-collapse{
+
+    header .navbar .navbar-collapse {
         height: 100vh;
     }
 
     header .navbar .navbar-collapse a {
         color: var(--primary-color);
-        font-size:normal;
+        font-size: normal;
         margin: 20px;
 
     }
+
     .photo-1,
     .photo-2,
     .photo-3,
     .photo-4,
-    .photo-5,
+    .photo-5{
+        grid-row: span 5;
+    }
     .photo-6,
-    .photo-7,
-    .photo-8{
+    .photo-7{
         grid-row: span 4;
     }
-
+    .photo-8{
+        grid-row: span 2;
+    }
+    .photo-2,.photo-5,.photo-4{
+        grid-row: span 3;
+    }
     .grid {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         font-size: normal;
     }
@@ -600,6 +702,7 @@ footer span:hover {
         height: 3px;
         bottom: -5px;
     }
+
     header .navbar .navbar-collapse a:nth-child(even):before {
         background: var(--hover2);
         height: 3px;
@@ -607,7 +710,7 @@ footer span:hover {
     }
 
     header .navbar.active .navbar-collapse {
-        background: var(--background);
+        background-color:#a2ace6;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -617,6 +720,11 @@ footer span:hover {
         transition: 1s ease;
         z-index: 99;
     }
+
+    .dark .navbar.active .navbar-collapse {
+        background-color:#1d1e28;
+        
+    } 
 
     .menu {
         width: 25px;
@@ -655,6 +763,7 @@ footer span:hover {
 
     .image img {
         width: 100%;
+        border-radius: 8px;
     }
 
     .projects {
@@ -699,7 +808,7 @@ footer span:hover {
         margin-top: 1em;
         display: flex;
         font-size: .7em;
-        align-items:center;
+        align-items: center;
         padding: 5px;
         text-decoration: none;
         text-transform: uppercase;
@@ -707,15 +816,18 @@ footer span:hover {
         font-weight: var(--weight-4);
         transition: .5s ease;
     }
-    .hire{
-        grid-column:span 2;
+
+    .hire {
+        grid-column: span 2;
     }
-    .hire-icons{
+
+    .hire-icons {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap:10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
-    .whatsapp h6{
+
+    .whatsapp h6 {
         font-size: 10px;
     }
 
@@ -732,22 +844,24 @@ footer span:hover {
     footer a {
         font-size: 10px;
     }
+
     footer .whatsapp .icon ion-icon {
         font-size: 1.2em;
         margin-right: 10px;
     }
-    footer .whatsapp .info span{
-        font-size:normal;
+
+    footer .whatsapp .info span {
+        font-size: normal;
+    }
+}
+@media (min-width:600px) {
+    .about .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width:600px){
-    .about .grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-@media (min-width:900px){
-    .about .grid{
-        grid-template-columns:repeat(3,1fr);
+@media (min-width:900px) {
+    .about .grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
