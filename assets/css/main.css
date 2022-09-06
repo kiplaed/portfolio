@@ -97,7 +97,7 @@ header {
 .logo {
     text-decoration: none;
     font-size: var(--logo);
-    font-family: 'Dm sans medium', cursive;
+    font-family: 'Dm sans medium', sans-serif;
     font-weight: 500;
     color: var(--primary-color);
 }
@@ -105,7 +105,7 @@ header {
 header .logo {
     text-decoration: none;
     font-size: var(--logo);
-    font-family: 'Dm sans medium', cursive;
+    font-family: 'Dm sans medium', sans-serif;
     font-weight: 600;
     color: var(--primary-color);
     font-size: 30px;
@@ -216,7 +216,7 @@ p {
     border-radius: 3px;
     border: none;
     padding: 4px;
-    font-family: "Dm Sans medium",cursive;
+    font-family: "Dm Sans medium",sans-serif;
 }
 
 .dark .get-started input {
