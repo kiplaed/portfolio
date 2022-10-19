@@ -25,9 +25,9 @@
 }
 
 .dark {
-    --primary-color: #f0f6fd;
+    --primary-color: #d8dce1;
     --primary-hover:
-        rgb(0, 34, 255);
+        rgb(255, 255, 255);
     --background:
         #434343;
     --hover2:
@@ -109,6 +109,12 @@ header .logo {
     font-weight: 600;
     color: var(--primary-color);
     font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo ion-icon{
+    font-size: 24px;
 }
 
 header .navbar {
@@ -151,19 +157,19 @@ header .navbar .navbar-collapse a:nth-child(even):before {
     transition: 0.8s ease;
 }
 
-/* header .navbar .navbar-collapse a:hover:before {
+header .navbar .navbar-collapse a:hover:before {
     width: 100%;
-} */
+}
 header .navbar .navbar-collapse a.active {
     color: var(--primary-hover);
     font-style: bold;
     transition: 0.5s ease-in-out;
 }
 
-header .navbar .navbar-collapse a.active:before {
+/* header .navbar .navbar-collapse a:before {
     color: var(--primary-hover);
     width: 100%;
-}
+} */
 
 header .navbar .navbar-collapse a:hover {
     color: var(--primary-hover);
@@ -389,51 +395,48 @@ p {
 .photo-7:hover .img-info,
 .photo-8:hover .img-info {
     bottom: 5px;
-    transition: .6s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .img-info h2,
 .img-info h4 {
-    margin-bottom:5px;
-    letter-spacing: .9px;
+    margin-bottom:2px;
+    letter-spacing: .7px;display: flex;
+    align-items: center;
 
 }
 
 .img-info h2{
-    font-size: 20px;
+    font-size: 16px;
 }
 .img-info h4{
-font-size: 18px;
+font-size: 14px;
 }
 
 .img-info p {
     border-left: 3px solid var(--background);
-    padding-left: 5px;
-    font-size: 16px;
-    letter-spacing: .9px;
+    padding-left: 4px;
+    font-size: 13px;
 }
 .img-info {
-    transition: .6s ease-in-out;
+    transition: 2s ease-in-out;
     font-family: "Dm Sans Medium", sans-serif;
     position: absolute;
     border-radius:10px;
     bottom: -100%;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom:10px;
     width: 96%;
-    background-color: rgba(81, 80, 80, 0.694);
+    background-color: rgba(189, 189, 189, 0.719);
     padding: 10px;
-    z-index: 1;
     left: 50%;
     transform: translate(-50%);
     color: var(--primary-color);
     backdrop-filter: blur(50px);
-    font-weight: 400;
 }
 
 .dark .img-info {
-    background-color: rgba(0, 0, 0, 0.728);
-    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.797);
 }
 
 .photo-2,
@@ -864,4 +867,12 @@ footer span:hover {
     .about .grid {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+.rights{
+    margin-top: 3em;
+    width: 100%;
+    margin: auto;
+}
+.rf{
+    font-family:"Inter medium",sans-serif;
 }
