@@ -3,9 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-padding: 60px;
-
+    scroll-padding: 70px;
+    letter-spacing: normal;
+    font-family: "Maison Nueue book", sans-serif;
 }
+html{
+    font-size: 82.5%;
+}
+
 
 ::selection {
     color: var(--background);
@@ -16,20 +21,20 @@
 :root {
     --primary-color: #000000;
     --primary-hover:
-        rgb(0, 34, 255);
+        rgb(60, 78, 193);
     --background:
-        #c2caf6;
+        #f2f4f8;
     --logo: 2.3em;
     --hover2:
-        rgb(55, 112, 226);
+        rgb(149, 169, 209);
 }
 
 .dark {
-    --primary-color: #d8dce1;
+    --primary-color: #ffffff;
     --primary-hover:
-        rgb(255, 255, 255);
+        rgb(197, 197, 197);
     --background:
-        #434343;
+        #232121;
     --hover2:
         rgb(63, 120, 177);
 }
@@ -40,11 +45,8 @@
 
 body {
     background-color:var(--background);
-    font-family: 'Dm Sans', sans-serif;
     color: var(--primary-color);
     margin-bottom: 3em;
-    font-weight: 500;
-    font-size: 16px;
 }
 
 .switchmodes {
@@ -65,7 +67,9 @@ body {
 
 .switchmodes ion-icon.active {
     display: block;
+    color: var(--primary-hover);
     cursor: pointer;
+    
 }
 
 .dark header img,
@@ -81,7 +85,7 @@ header {
     width: 100%;
     height: 70px;
     margin: 0;
-    background-color:#a2ace6;
+    background-color:#d2d8fe;
     padding: 15px 90px;
     display: flex;
     justify-content: space-between;
@@ -90,31 +94,20 @@ header {
     z-index: 99;
 }
 .dark header{
-    background-color:#1d1e28;
+    background-color:#0f0e0e;
     
 } 
 
 .logo {
     text-decoration: none;
     font-size: var(--logo);
-    font-family: 'Dm sans medium', sans-serif;
-    font-weight: 500;
-    color: var(--primary-color);
+    width: 80px;
+    height:auto;
 }
 
-header .logo {
-    text-decoration: none;
-    font-size: var(--logo);
-    font-family: 'Dm sans medium', sans-serif;
-    font-weight: 600;
-    color: var(--primary-color);
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header .logo ion-icon{
-    font-size: 24px;
+.logo img{
+    width: 100%; 
+    height: auto;
 }
 
 header .navbar {
@@ -124,7 +117,7 @@ header .navbar {
 
 header .navbar .navbar-collapse a {
     position: relative;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     text-decoration: none;
     margin-right: 15px;
@@ -222,7 +215,6 @@ p {
     border-radius: 3px;
     border: none;
     padding: 4px;
-    font-family: "Dm Sans medium",sans-serif;
 }
 
 .dark .get-started input {
@@ -233,7 +225,7 @@ p {
 .get-started input {
     width: 75%;
     font-weight: 500;
-    background-color: #e6e9fb;
+    background-color: #e5e0e0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -287,17 +279,17 @@ p {
 }
 
 .section-title h1 {
-    font-size: 25px;
     text-transform: uppercase;
+    font-size: 20px;
 }
 
 .section-title p {
-    font-size:18px;
+    font-size:15px;
 }
 
 .section-projects {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(2, 2fr);
     gap: 1.3em;
 }
 
@@ -316,33 +308,37 @@ p {
     width: 130px;
     height: 50px;
     display: flex;
-    background-color: var(--primary-color);
-    border-radius: 3px;
+    background-color:#a2ace6;
+    border-radius: 5px;
     margin-top: 1em;
     padding: 7px;
     align-items: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--background);
+    color: var(--primary-color);
     font-weight: var(--weight-4);
     transition: .5s ease-in-out;
 }
+.dark .project-link{
+    color: #000;
+}
+
 
 .project-link i,
 .project-link ion-icon {
     font-size: 1.2em;
     margin-left: .3em;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .project-link:hover i,
 .project-link:hover ion-icon {
     margin-left: .5em;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .project-link:hover {
-    background: #5e9aa9;
+    background: #6f7272;
     color: var(--background);
     transition: .5s ease-in-out;
 }
@@ -416,11 +412,10 @@ font-size: 14px;
 .img-info p {
     border-left: 3px solid var(--background);
     padding-left: 4px;
-    font-size: 13px;
+    font-size: 15px;
 }
 .img-info {
     transition: 2s ease-in-out;
-    font-family: "Dm Sans Medium", sans-serif;
     position: absolute;
     border-radius:10px;
     bottom: -100%;
@@ -432,7 +427,6 @@ font-size: 14px;
     left: 50%;
     transform: translate(-50%);
     color: var(--primary-color);
-    backdrop-filter: blur(50px);
 }
 
 .dark .img-info {
@@ -464,101 +458,12 @@ font-size: 14px;
     border-radius: 5px;
 }
 
-footer {
-    padding: 15px;
-    background: none;
-    color: var(--primary-color);
-    width: 100%;
-    height: auto;
-    min-height: 85vh;
-}
-
-footer .fcontent {
-    margin: 1.2em;
-}
-
-footer .icon ion-icon {
-    font-size: 1.5em;
-    margin-right: 15px;
-}
-
-footer .facebook,
-.twitter,
-.instagram,
-.location,
-.school,
-.whatsapp {
-    display: flex;
-    padding: 3px;
-    align-items: center;
-}
-
-.f-logo h4 {
-    font-size: 30px;
-    font-weight: 600;
-}
-
-footer a {
-    font-size: 12px;
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .3s ease-in-out;
-    color: rgb(4, 20, 191);
-    display: flex;
-    align-items: center;
-}
-
-footer a ion-icon {
-    margin-left: 3px;
-}
-
-.dark footer a {
-    color: #9ffff7;
-}
-
-.dark footer a:hover {
-    color: #c3fbff;
-}
-
-footer a:hover {
-    transition: .3s ease-in-out;
-    color: rgb(3, 2, 58);
-}
-
-footer .fcontent .f-ooter {
-    justify-content: center;
-}
-.f-ooter{
-    padding: 0 20px;
-}
 
 .grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 }
-
-footer .hire h4,.me h4{
-    font-weight: bolder;
-    text-decoration: underline;
-    font-size: 25px;
-}
-
-footer h6 {
-    font-weight:500;
-    font-size: 17px;
-}
-
-footer span {
-    transition: .4s ease-in-out;
-}
-
-footer span:hover {
-    padding-right: 4px;
-    transition: .4s ease-in-out;
-}
-
 
 @media (max-width:900px) {
     .content {
@@ -612,9 +517,6 @@ footer span:hover {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .f-ooter{
-        padding: 0 10px;
-    }
     .photo-1,
     .photo-2,
     .photo-3,
@@ -629,13 +531,12 @@ footer span:hover {
     .photo-8{
         grid-row: span 2;
     }
-    .photo-2,.photo-5,.photo-4{
+    .photo-5,.photo-4{
         grid-row: span 3;
     }
 
     
 }
-
 @media (max-width:600px) {
 
     header {
@@ -660,7 +561,6 @@ footer span:hover {
         transition: 1s ease;
         z-index: 99;
     }
-
     header .navbar .navbar-collapse {
         height: 100vh;
     }
@@ -679,6 +579,10 @@ footer span:hover {
     .photo-5{
         grid-row: span 5;
     }
+    .photo-2{
+        grid-row: span 4;
+
+    }
     .photo-6,
     .photo-7{
         grid-row: span 4;
@@ -686,7 +590,7 @@ footer span:hover {
     .photo-8{
         grid-row: span 2;
     }
-    .photo-2,.photo-5,.photo-4{
+   .photo-5,.photo-4{
         grid-row: span 3;
     }
     .grid {
@@ -804,10 +708,10 @@ footer span:hover {
     }
 
     .project-link {
-        width: 125px;
+        height: 45px;
+        width: 100px;
         position: relative;
-        background-color: var(--primary-color);
-        border-radius: 3px;
+        border-radius: 6px;
         margin-top: 1em;
         display: flex;
         font-size: .7em;
@@ -815,7 +719,6 @@ footer span:hover {
         padding: 5px;
         text-decoration: none;
         text-transform: uppercase;
-        color: var(--background);
         font-weight: var(--weight-4);
         transition: .5s ease;
     }
@@ -839,23 +742,6 @@ footer span:hover {
         color: var(--background);
         transition: .5s ease;
     }
-
-    footer .fcontent {
-        margin: .6em;
-    }
-
-    footer a {
-        font-size: 10px;
-    }
-
-    footer .whatsapp .icon ion-icon {
-        font-size: 1.2em;
-        margin-right: 10px;
-    }
-
-    footer .whatsapp .info span {
-        font-size: normal;
-    }
 }
 @media (min-width:600px) {
     .about .grid {
@@ -867,12 +753,4 @@ footer span:hover {
     .about .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-.rights{
-    margin-top: 3em;
-    width: 100%;
-    margin: auto;
-}
-.rf{
-    font-family:"Inter medium",sans-serif;
 }
