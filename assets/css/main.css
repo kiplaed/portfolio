@@ -4,7 +4,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding: 56px;
-    letter-spacing: normal;
 }
 
 ::selection {
@@ -39,7 +38,7 @@ body {
     color: var(--text-color);
     transition: .6s ease-in-out;
     font-size: 16px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .switchmodes {
