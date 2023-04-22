@@ -3,14 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-padding: 70px;
+    scroll-padding: 56px;
     letter-spacing: normal;
-    font-family: "Maison Nueue book", sans-serif;
 }
-html{
-    font-size: 82.5%;
-}
-
 
 ::selection {
     color: var(--background);
@@ -20,23 +15,19 @@ html{
 
 :root {
     --primary-color: #000000;
-    --primary-hover:
-        rgb(60, 78, 193);
-    --background:
-        #f2f4f8;
-    --logo: 2.3em;
-    --hover2:
-        rgb(149, 169, 209);
+    --background:#f2f4f8;
+    --hover2:rgb(81, 130, 228);
+    --text-color:#000000;
 }
+
+
+
 
 .dark {
     --primary-color: #ffffff;
-    --primary-hover:
-        rgb(197, 197, 197);
-    --background:
-        #232121;
-    --hover2:
-        rgb(63, 120, 177);
+    --background:#232121;
+    --hover2:rgb(225, 225, 225);
+    --text-color:#ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -45,8 +36,10 @@ html{
 
 body {
     background-color:var(--background);
-    color: var(--primary-color);
-    margin-bottom: 3em;
+    color: var(--text-color);
+    transition: .6s ease-in-out;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .switchmodes {
@@ -59,21 +52,19 @@ body {
     right: 1rem;
 }
 
-.switchmodes ion-icon {
+.switchmodes i {
     display: none;
-    font-size: 16px;
-    font-weight: 500;
 }
 
-.switchmodes ion-icon.active {
+.switchmodes i.active {
     display: block;
     color: var(--primary-hover);
     cursor: pointer;
+    font-size: 18px;
     
 }
 
-.dark header img,
-.dark header .menu {
+.dark header img,.dark .menu{
     filter: invert(1);
 }
 
@@ -83,9 +74,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 55px;
     margin: 0;
-    background-color:#d2d8fe;
+    background-color:#d6d6d6;
     padding: 15px 90px;
     display: flex;
     justify-content: space-between;
@@ -100,7 +91,6 @@ header {
 
 .logo {
     text-decoration: none;
-    font-size: var(--logo);
     width: 80px;
     height:auto;
 }
@@ -117,11 +107,10 @@ header .navbar {
 
 header .navbar .navbar-collapse a {
     position: relative;
-    font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     margin-right: 15px;
-    color: var(--primary-color);
+    color: var(--text-color);
     transition: 0.5s ease;
 }
 
@@ -130,11 +119,11 @@ header .navbar .navbar-collapse a::before {
     position: absolute;
     background: rgb(26, 72, 165);
     width: 0;
-    height: 3px;
-    bottom: -5px;
-    border-radius: 15px;
+    height: 2px;
+    bottom: -2px;
+    border-radius: 10px;
     left: 0;
-    transition: 0.8s ease;
+    transition: 0.5s ease;
 }
 
 header .navbar .navbar-collapse a:nth-child(even):before {
@@ -142,8 +131,8 @@ header .navbar .navbar-collapse a:nth-child(even):before {
     position: absolute;
     background: rgb(26, 72, 165);
     width: 0;
-    height: 3px;
-    bottom: -5px;
+    height: 2px;
+    bottom: -2px;
     border-radius: 15px;
     left: 100%;
     transform: translate(-100%);
@@ -154,8 +143,8 @@ header .navbar .navbar-collapse a:hover:before {
     width: 100%;
 }
 header .navbar .navbar-collapse a.active {
-    color: var(--primary-hover);
-    font-style: bold;
+    color: var(--hover2);
+    font-size: bold;
     transition: 0.5s ease-in-out;
 }
 
@@ -165,7 +154,7 @@ header .navbar .navbar-collapse a.active {
 } */
 
 header .navbar .navbar-collapse a:hover {
-    color: var(--primary-hover);
+    color: var(--hover2);
 }
 
 .content {
@@ -188,12 +177,6 @@ p {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
-.text p,
-.hire p {
-    font-size: 16px;
-}
-
 .text h1 {
     font-weight: bold;
     margin-bottom: .6em;
@@ -237,7 +220,6 @@ p {
     font-weight: 400;
     background-color: var(--primary-color);
     color: var(--background);
-    font-size: 13px;
 }
 
 .image {
@@ -254,7 +236,6 @@ p {
 
 .grid {
     margin: 0.4em;
-    font-size: 1.2em;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
@@ -280,11 +261,6 @@ p {
 
 .section-title h1 {
     text-transform: uppercase;
-    font-size: 20px;
-}
-
-.section-title p {
-    font-size:15px;
 }
 
 .section-projects {
@@ -300,61 +276,46 @@ p {
 }
 
 .project-description {
-    margin-bottom: 2em;
-    font-size: 16px;
+    margin-bottom: 1.2em;
 }
 
 .project-link {
-    width: 130px;
-    height: 50px;
+    width: 120px;
+    height: 45px;
     display: flex;
-    background-color:#a2ace6;
-    border-radius: 5px;
+    background-color: #a7a7a7;
+    border-radius: 4px;
     margin-top: 1em;
     padding: 7px;
     align-items: center;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--primary-color);
-    font-weight: var(--weight-4);
-    transition: .5s ease-in-out;
+    transition: .9s ease-in-out;
 }
 .dark .project-link{
     color: #000;
+    background-color: #d6d6d6;
 }
-
-
-.project-link i,
 .project-link ion-icon {
-    font-size: 1.2em;
+    font-size: .8rem;
     margin-left: .3em;
     transition: .3s ease-in-out;
 }
 
-.project-link:hover i,
 .project-link:hover ion-icon {
     margin-left: .5em;
     transition: .3s ease-in-out;
 }
 
 .project-link:hover {
-    background: #6f7272;
-    color: var(--background);
-    transition: .5s ease-in-out;
+    background-color: #8080f9;
+    font-weight: var(--weight-4);
+    transition: .3s ease-in-out;
 }
-
-.blog {
-    height: auto;
+.projects a:hover{
+    text-decoration: none;
 }
-
-.blog-update {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
 .about {
     width: 100%;
     height: auto;
@@ -402,17 +363,10 @@ p {
 
 }
 
-.img-info h2{
-    font-size: 16px;
-}
-.img-info h4{
-font-size: 14px;
-}
-
 .img-info p {
     border-left: 3px solid var(--background);
     padding-left: 4px;
-    font-size: 15px;
+    word-wrap: break-word;
 }
 .img-info {
     transition: 2s ease-in-out;
@@ -466,6 +420,11 @@ font-size: 14px;
 }
 
 @media (max-width:900px) {
+
+    .project-link {
+        font-size: 14px !important;
+    }
+
     .content {
         display: flex;
         align-items: space-between;
@@ -507,15 +466,9 @@ font-size: 14px;
         border-radius: 8px;
     }
 
-
-    .text h1 {
-        font-size: 1em;
-    }
-
     p {
-        font-size: 15px;
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     .photo-1,
     .photo-2,
@@ -538,7 +491,6 @@ font-size: 14px;
     
 }
 @media (max-width:600px) {
-
     header {
         padding: 12px 40px;
     }
@@ -567,7 +519,6 @@ font-size: 14px;
 
     header .navbar .navbar-collapse a {
         color: var(--primary-color);
-        font-size: normal;
         margin: 20px;
 
     }
@@ -597,7 +548,6 @@ font-size: 14px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
-        font-size: normal;
     }
 
     header .navbar .navbar-collapse a:hover {
@@ -660,7 +610,7 @@ font-size: 14px;
     .text {
         width: 100%;
         display: block;
-        transform: scale(.95);
+        transform: scale(1);
     }
 
     .image {
@@ -689,12 +639,7 @@ font-size: 14px;
     }
 
     .section-title h1 {
-        font-size: 1.3em;
         text-transform: uppercase;
-    }
-
-    .section-title p {
-        font-size: 1em;
     }
 
     .section-projects {
@@ -714,27 +659,12 @@ font-size: 14px;
         border-radius: 6px;
         margin-top: 1em;
         display: flex;
-        font-size: .7em;
         align-items: center;
         padding: 5px;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: var(--weight-4);
         transition: .5s ease;
-    }
-
-    .hire {
-        grid-column: span 2;
-    }
-
-    .hire-icons {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .whatsapp h6 {
-        font-size: 10px;
     }
 
     .project-link:hover {

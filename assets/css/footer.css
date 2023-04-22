@@ -2,29 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Maison Nueue Book",sans-serif;
 }
 
 footer {
     display: grid;
     grid-template-columns: repeat(3,2fr);
     gap: 2em;
-    margin-bottom:0;
     padding: 50px 30px;
     background-color:var(--background-color);
-    min-height:100vh;
+    height: auto;
 
 }
 
 i{
-    color: #161617;
+    color: #3939d8;
 }
 a{
     text-decoration: none;
-    color: #111112;
+    color: #3939d8;
 }
 .dark i{
-    color: #c1c4ff;
+    color: #f4f4f4;
 }
 .dark a{
     text-decoration: none;
@@ -34,7 +32,7 @@ a:hover{
     text-decoration: underline;
 }
 .socials{
-    padding: 0 1.2em;
+    padding: 0 .5em;
 }
 .location,.about{
     border-left: 1.3px solid var(--primary-color);
@@ -44,19 +42,18 @@ a:hover{
 .social-item{
     display: flex;
     align-items: center;
-    margin-bottom: 2em;
-}
-.social-item:nth-child(1){
-    margin-top: 2em;
+    margin-bottom: 1em;
 }
 .icon i{
     font-size: 24px;
 }
 .social-item .item-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 12px;
     padding-left:7px;
     border-left: 2px solid var(--primary-color);
-    margin-top: 2px;
 }
 .social-item .item-name .name{
     font-size: 16px;
@@ -87,6 +84,9 @@ li:nth-child(1),li:nth-child(2){
 .contacts li,.offers li,.hours li{
     margin-bottom: .3em;
 }
+h6{
+    font-size: 16px;
+}
 
 .copyright{
     width: 100%;
@@ -95,7 +95,6 @@ li:nth-child(1),li:nth-child(2){
     justify-content: center;
     grid-column: span 3;
     align-items: center;
-    z-index: 99;
     background-color:var(--background-color);
 }
 
@@ -121,6 +120,13 @@ li:nth-child(1),li:nth-child(2){
     }
     .about,.location,.socials{
         border-bottom:2px solid ;
+    }
+    .socials-items{
+        margin-top: 15px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1em;
     }
 }
 
