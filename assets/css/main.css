@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding: 56px;
+    font-family: 'Golos Text', sans-serif;
 }
 
 ::selection {
@@ -38,7 +39,7 @@ body {
     color: var(--text-color);
     transition: .6s ease-in-out;
     font-size: 16px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Golos Text', sans-serif;
 }
 
 .switchmodes {
