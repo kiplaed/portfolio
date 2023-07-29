@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    gap: 2em;
+    padding: 50px 30px;
+    background-color:var(--background-color);
+    height: auto;
+
+}
+
+i{
+    color: #3939d8;
+}
+a{
+    text-decoration: none;
+    color: #3939d8;
+}
+.dark i{
+    color: #f4f4f4;
+}
+.dark a{
+    text-decoration: none;
+    color: #c4e6ff;
+}
+a:hover{
+    text-decoration: underline;
+}
+.socials{
+    padding: 0 .5em;
+}
+.location,.about{
+    border-left: 1.3px solid var(--primary-color);
+    padding: 0 1.2em ;
+}
+
+.social-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.icon i{
+    font-size: 24px;
+}
+.social-item .item-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+    padding-left:7px;
+    border-left: 2px solid var(--primary-color);
+}
+.social-item .item-name .name{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+}
+.link i{
+    margin-left: 1px;
+    transition: .5s ease-in-out;
+    font-size: 12px;
+}
+.link:hover i{
+    font-size: 13px;
+    margin-left: 4px;
+    transition: .5s ease-in-out;;
+}
+.about li,.location li{
+    margin-bottom: .52em;
+    margin-left: 1em;
+}
+li:nth-child(1),li:nth-child(2){
+    margin-bottom: 2em;
+}
+.contacts li,.offers li,.hours li{
+    margin-bottom: .3em;
+}
+footer h6{
+    font-size: 16px;
+    text-decoration:underline;
+}
+
+.copyright{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    grid-column: span 3;
+    align-items: center;
+    background-color:var(--background-color);
+}
+
+.location h6{
+    text-decoration: underline;
+    margin-bottom: 1.4em;
+}
+.location li i,.about li i{
+    color:var(--primary-color);
+}
+
+@media(max-width:570px) {
+    footer{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+    }
+    .copyright{
+        grid-column: span 1;
+    }
+    .location,.about{
+        border:none;
+        padding: 0 1.2em ;
+    }
+    .about,.location,.socials{
+        border-bottom:2px solid ;
+    }
+    .socials-items{
+        margin-top: 15px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1em;
+    }
+}
+
+@media(max-width:750px)and (min-width:570px) {
+    footer{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+    }
+    .about{
+        grid-column: span 2;
+        border-left: none ;
+        border-top: 1.4px solid;
+    }
+    .copyright{
+        grid-column: span 2;
+    }
+    .location{
+        border-left: 1.3px solid black;
+        padding: 0 1.2em ;
+    }
+}
